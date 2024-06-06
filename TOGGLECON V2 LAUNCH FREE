@@ -1,0 +1,225 @@
+local kavoUi = loadstring(game:HttpGet("https://pastebin.com/raw/vff1bQ9F"))()
+local window = kavoUi.CreateLib("TOGGLECON HUB","Sentinel")
+
+---Tabs
+
+local Tab1 = window:NewTab("Main")
+local Tab1Section = Tab1:NewSection("Main")
+local Tab2 = window:NewTab("others")
+local Tab2Section = Tab2:NewSection("others")
+local Tab3 = window:NewTab("Credits")
+local Tab3Section = Tab3:NewSection("TOGGLECON HUB")
+local Tab3Section = Tab3:NewSection("By apollo")
+local Tab3Section = Tab3:NewSection("Hub in toggles and buttons")
+local Tab4 = window:NewTab("Admins")
+local Tab4Section = Tab4:NewSection("Admins")
+local Tab5 = window:NewTab("trolling")
+local Tab5Section = Tab5:NewSection("trolling")
+
+---Buttons
+
+Tab1Section:NewToggle("Fullbright", "around you everything will become clear", function(state)
+    if state then
+        loadstring(game:HttpGet("https://pastefy.app/MCG5lKRz/raw"))()  
+    else
+       loadstring(game:HttpGet("https://pastefy.app/MCG5lKRz/raw"))()  
+    end
+end)
+
+Tab1Section:NewButton("Tpwalk", "can you bypass anti cheat", function()
+   loadstring(game:HttpGet("https://pastefy.app/jF15iE7c/raw"))()  
+end)
+
+Tab1Section:NewToggle("Infinite Jumps"," Infinite Jumps",function()
+local InfiniteJumpEnabled = true
+game:GetService("UserInputService").JumpRequest:connect(function()
+	if InfiniteJumpEnabled then
+		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+	end
+end)
+end)
+
+Tab1Section:NewButton("Infinite Yeild","Loads Iy",function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+Tab1Section:NewButton("Speed Tool","fast",function()
+mouse = game.Players.LocalPlayer:GetMouse()
+tool = Instance.new("Tool")
+tool.RequiresHandle = false
+tool.Name = "Click To Speed Up"
+tool.Activated:connect(function()
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
+end)
+tool.Parent = game.Players.LocalPlayer.Backpack
+end)
+
+Tab1Section:NewButton("No Clip Tool","Go throw walls",function()
+mouse = game.Players.LocalPlayer:GetMouse()
+tool = Instance.new("Tool")
+tool.RequiresHandle = false
+tool.Name = ("Equip To Noclip")
+tool.Activated:Connect(function()
+game.Players.LocalPlayer.Character.Humanoid.MaxHealth = math.huge
+game.Players.LocalPlayer.Character.Humanoid.Health = math.huge
+while true do
+		game:GetService("RunService").Stepped:wait()
+		game.Players.LocalPlayer.Character.Head.CanCollide = false
+		game.Players.LocalPlayer.Character.Torso.CanCollide = false
+end
+end)
+tool.Parent = game.Players.LocalPlayer.Backpack
+end)
+
+Tab2Section:NewButton("Click to Tp","Teleport",function()
+mouse = game.Players.LocalPlayer:GetMouse()
+tool = Instance.new("Tool")
+tool.RequiresHandle = false
+tool.Name = "Equip to Click TP"
+tool.Activated:connect(function()
+local pos = mouse.Hit+Vector3.new(0,2.5,0)
+pos = CFrame.new(pos.X,pos.Y,pos.Z)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
+end)
+tool.Parent = game.Players.LocalPlayer.Backpack
+end)
+
+Tab2Section:NewButton("Fly","Loads Fly Script",function()
+loadstring(game:HttpGet('https://pastebin.com/raw/YSL3xKYU'))()
+end)
+
+Tab2Section:NewButton("Hitbox","Increase Range",function()
+_G.HeadSize = 25
+_G.Disabled = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.Disabled then
+for i,v in next, game:GetService('Players'):GetPlayers() do
+if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+pcall(function()
+v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
+v.Character.HumanoidRootPart.Transparency = 0.7
+v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really black")
+v.Character.HumanoidRootPart.Material = "Neon"
+v.Character.HumanoidRootPart.CanCollide = false
+end)
+end
+end
+end
+end)
+end)
+
+Tab2Section:NewButton("Big Hitbox","Increase large Range",function()
+_G.HeadSize = 50
+_G.Disabled = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.Disabled then
+for i,v in next, game:GetService('Players'):GetPlayers() do
+if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+pcall(function()
+v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
+v.Character.HumanoidRootPart.Transparency = 0.7
+v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really black")
+v.Character.HumanoidRootPart.Material = "Neon"
+v.Character.HumanoidRootPart.CanCollide = false
+end)
+end
+end
+end
+end)
+end)
+
+Tab1Section:NewButton("Flashlight", "ButtonInfo", function()
+    loadstring(game:HttpGet("https://pastefy.app/fhh3lJ6R/raw"))()  
+end)
+
+Tab1Section:NewButton("OWL HUB", "ButtonInfo", function()
+    --[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
+end)
+
+Tab1Section:NewButton("Game Hub", "ButtonInfo", function()
+    --[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerScripter/Game-Hub/main/loader"))()
+end)
+
+Tab2Section:NewButton("ghub", "ButtonInfo", function()
+    --[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+loadstring(game:HttpGet("https://raw.githubusercontent.com/gclich/GHUBV14XZ/main/Ghub_Main_Loader.txt"))()
+end)
+
+Tab2Section:NewButton("VexHub", "ButtonInfo", function()
+   loadstring(game:HttpGet("https://pastefy.app/gKutj1JC/raw"))()  
+end)
+
+Tab2Section:NewButton("Rochips Admin", "ButtonInfo", function()
+   --//rochips panel//-- 
+ g,ld,gl,Panel,Rochips_ = game,loadstring,"https://glot.io/snippets","a6c7y0","gvjv" 
+ ld(g:HttpGet((''..gl..'/'..Rochips_..''..Panel.. '/raw/main.lua'),true))()
+end)
+
+Tab4Section:NewButton("Nameless admin", "ButtonInfo", function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source"))()
+end)
+
+Tab4Section:NewButton("infinite yield", "ButtonInfo", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+Tab4Section:NewButton("iv admin", "ButtonInfo", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/BloodyBurns/Hex/main/Iv%20Admin%20v3.lua"))()
+end)
+
+Tab4Section:NewButton("fates admin", "ButtonInfo", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
+end)
+
+Tab5Section:NewButton("tiger X", "ButtonInfo", function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/balintTheDevX/Tiger-X-V3/main/Tiger%20X%20its%20Back"))()
+end)
+
+Tab5Section:NewButton("fe trolling 1", "ButtonInfo", function()
+   --[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+loadstring(game:HttpGet(("https://pastebin.com/raw/wzB1Qh78"), true))()
+end)
+
+Tab5Section:NewButton("fe trolling 2", "ButtonInfo", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/FE%20Trolling%20GUI.luau"))()
+end)
+
+Tab5Section:NewButton("fe chat admin", "ButtonInfo", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/game-hax/uca/main/release/uca.min.lua"))()
+end)
+
+Tab5Section:NewButton("The glios", "ButtonInfo", function()
+   loadstring(game:HttpGet(('https://glot.io/snippets/gua2ntmbdm/raw/main.lua'),true))()
+end)
+
+Tab5Section:NewButton("keyboard", "ButtonInfo", function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
+end)
+
+Tab5Section:NewButton("Fe glitch", "ButtonInfo", function()
+    loadstring(game:HttpGet(('https://pastefy.app/s6DE4bNC/raw'),true))()
+end)
+
+Tab5Section:NewButton("fe animation 2006 old", "ButtonInfo", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/hi822010/Old-Roblox-2007/main/2007"))();
+end)
+
+Tab2Section:NewButton("x ghost hub x", "ButtonInfo", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub'))()
+end)
+
+Tab3Section:NewButton("discord", "ButtonInfo", function()
+    setclipboard("https://discord.com/invite/kA4xpz4M")
+end)
