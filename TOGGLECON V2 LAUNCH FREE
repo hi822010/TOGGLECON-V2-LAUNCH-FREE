@@ -1,5 +1,5 @@
 local kavoUi = loadstring(game:HttpGet("https://pastebin.com/raw/vff1bQ9F"))()
-local window = kavoUi.CreateLib("TOGGLECON HUB","Sentinel")
+local window = kavoUi.CreateLib("TOGGLECON HUB V2","Sentinel")
 
 ---Tabs
 
